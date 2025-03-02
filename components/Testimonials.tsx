@@ -15,40 +15,64 @@ const reviews = [
     img: "/zann.webp",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
+    name: "Murata",
+    username: "@sempaknapoleon",
+    body: "matahari akan terus terbit,Dan kita akan mencoba Lagi.",
+    img: "/athar.webp",
   },
   {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
+    name: "Ganz",
+    username: "@ganipreset",
+    body: "WOI JANGAN LEWAT DULU SIRKEL LO MANA",
+    img: "/gani.webp",
   },
   {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
+    name: "apis",
+    username: "@justpysz",
+    body: "Sedikit productivity lebih baik daripada toxic productivity.",
+    img: "/apis.webp",
   },
   {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
+    name: "Bang Bilal",
+    username: "@bilaltkj",
+    body: "wih paham done.",
+    img: "/bilal.webp",
   },
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
+    name: "Inisial R A",
+    username: "@rahmataditya",
+    body: "Hitamkan para karbit.",
+    img: "/rahmataditya.webp",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
+    name: "Setelah Efek",
+    username: "@drst",
+    body: "Lapar. Paham!?",
+    img: "/yasir.webp",
+  },
+  {
+    name: "Fein",
+    username: "@synzux",
+    body: "pop mie pop mie pop mie",
+    img: "/vino.webp",
+  },
+  {
+    name: "Wesfi Representative",
+    username: "@atha",
+    body: "Ndak dapek deh.",
+    img: "/atha.webp",
+  },
+  {
+    name: "Hantulaut",
+    username: "@Zcwan",
+    body: "Ubur-ubur ikan lele mokel yok lek 🗿😂",
+    img: "/juna.webp",
+  },
+  {
+    name: "Firaun",
+    username: "@ramsescorda",
+    body: "hidup sekali mati sekali, berdamailah dengan kesalahan dan kegagalan, jangan terkekang oleh penyesalan, karena seribu satu penyesalan tidak dapat merubah masa lalu dan seribu satu ke khawatiran tidak menentukan masa depan",
+    img: "/random.webp",
   },
 ];
 
@@ -77,7 +101,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <img className="rounded-full aspect-square" width="32" height="32" alt="" src={img} />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
@@ -111,13 +135,13 @@ export function Testimonial() {
             <ReviewCard key={review.username} {...review} />
           ))}
         </Marquee>
-        <Marquee pauseOnHover className="[--duration:20s]" vertical>
-          {secondRow.map((review) => (
+        <Marquee reverse pauseOnHover className="[--duration:20s]" vertical>
+          {firstRow.map((review) => (
             <ReviewCard key={review.username} {...review} />
           ))}
         </Marquee>
-        <Marquee reverse pauseOnHover className="[--duration:20s]" vertical>
-          {firstRow.map((review) => (
+        <Marquee pauseOnHover className="[--duration:20s]" vertical>
+          {secondRow.map((review) => (
             <ReviewCard key={review.username} {...review} />
           ))}
         </Marquee>
